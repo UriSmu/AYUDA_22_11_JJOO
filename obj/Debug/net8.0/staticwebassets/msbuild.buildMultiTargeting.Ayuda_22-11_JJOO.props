@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ayuda_22-11_JJOO.props" />
+</Project>

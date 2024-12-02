@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Ayuda_22-11_JJOO.props" />
+</Project>

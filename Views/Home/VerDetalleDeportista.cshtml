@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Deportistas";
+}
+
+<div class="card" style="width: 18rem;">
+    <img src="@ViewBag.Deportista.Foto" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">@ViewBag.Deportista.Nombre @ViewBag.Deportista.Apellido</h5>
+        <p>Fecha de nacimiento: @ViewBag.Deportista.FechaNacimiento</p>
+        <a href='@Url.Action("EliminarDeportista", new{idDeportista = ViewBag.Deportista.IdDeportistas})' class="btn btn-primary">Eliminar</a>
+    </div>
+</div>

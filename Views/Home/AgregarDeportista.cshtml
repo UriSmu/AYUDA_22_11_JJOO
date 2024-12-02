@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Agregar Deportista";
+}
+
+<form action='@Url.Action("GuardarDeportista")' method="post" onsubmit="return validarFecha()">
+    <input type="text" name="apellido" placeholder="apellido" required><br/>
+    <input type="text" name="nombre" placeholder="nombre" required><br/>
+    <input type="date" name="fechaNacimiento" id="fechaNacimiento" required><br/>
+    <p id="mensajeError" style="color: red;"></p>
+    <input type="text" name="foto" placeholder="Ingrese link a foto"><br/>
+    <select name="idPais">
+        <option value="" selected disabled>Seleccione el país</option>
+        @foreach(Pais item in ViewBag.Paises)
+        {
+            <option value="@item.IdPais">@item.Nombre</option>
+        }
+    </select><br/>
+    <select name="idDeporte">
+        <option value="" selected disabled>Seleccione el deporte</option>
+        @foreach(Deporte item in ViewBag.Deportes)
+        {
+            <option value="@item.IdDeportes">@item.Nombre</option>
+        }
+    </select><br/>
+    <input type="submit" value="Agregar">
+</form>
+<script src="~/js/site.js"></script>
